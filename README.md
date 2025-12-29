@@ -34,7 +34,7 @@ A responsive static website built as a frontend showcase project.
 - Vanilla JavaScript
 
 **Live demo:**  
-(Add your deployed project link here)
+https://deutschwelt.netlify.app/
 
 ---
 
@@ -69,16 +69,16 @@ A responsive static website built as a frontend showcase project.
 
 ## Deployment
 
-The portfolio is deployed using **GitHub Pages** and is fully responsive across devices.  
+The portfolio is deployed using **Netlify** and is fully responsive across devices.  
 It automatically adapts to the user’s system light/dark theme preference.
 
 ---
 
 ## Contact
 
-- GitHub: https://github.com/yourusername  
-- LinkedIn: https://linkedin.com/in/yourusername  
-- Email: youremail@example.com
+- GitHub: https://github.com/KEX-03  
+- LinkedIn: https://linkedin.com/in/kex03  
+- Email: vvk.shrma.03@gmail.com
 
 ---
 
