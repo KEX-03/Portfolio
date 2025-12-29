@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vivek | Frontend-Focused Web Developer</title>
+
+  <meta name="description" content="Frontend-focused web developer building clean, responsive, and accessible web interfaces using HTML, Tailwind CSS, and JavaScript.">
+  <meta name="author" content="Vivek">
+
+  <!-- Tailwind config: system-based dark mode -->
+  <script>
+    tailwind = {
+      config: {
+        darkMode: 'media'
+      }
+    }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur border-b border-gray-200 dark:border-gray-700 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <span class="font-semibold text-lg">Vivek</span>
+      <div class="space-x-6 hidden sm:block">
+        <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+        <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
+        <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        Frontend-focused Web Developer
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mb-8">
+        I build clean, responsive, and user-friendly web interfaces with a strong focus
+        on clarity, accessibility, and real-world usability.
+      </p>
+      <a href="#projects"
+         class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-500 transition">
+        View My Work
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="py-20 border-t border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-semibold mb-6">About</h2>
+      <p class="max-w-3xl leading-relaxed text-gray-700 dark:text-gray-300">
+
+        <p class="max-w-3xl leading-relaxed mb-4">
+            I’m a frontend-focused web developer working toward building skills that can be practically monetized through real projects. I enjoy translating ideas into clean, responsive interfaces using modern HTML, CSS, and JavaScript.
+        </p>
+
+        <p class="max-w-3xl leading-relaxed mb-4">
+            I approach development with a focus on clarity, maintainability, and real-world usability. I prefer understanding how things work under the hood rather than relying on abstractions I can’t explain.
+        </p>
+
+        <p class="max-w-3xl leading-relaxed mb-4">
+            I’ve recently completed and deployed multiple static projects where I handled layout, responsiveness, accessibility considerations, and non-trivial interaction logic such as scroll-based navigation state.
+        </p>
+
+        <p class="max-w-3xl leading-relaxed">
+            I’m currently deepening my frontend foundation while gradually expanding toward full-stack development through hands-on projects.
+        </p>
+
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-semibold mb-10">Projects</h2>
+
+      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">
+          Language School Website
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">
+          Designed and developed a responsive language school landing page as a frontend showcase project.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+            Implemented smooth anchor navigation, scroll-based section animations, and active navbar highlighting using IntersectionObserver. Paid particular attention to fixed-navbar UX edge cases, accessibility, and system-based light/dark theming.
+        </p>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+            The project was deployed using GitHub Pages and structured to reflect real-world landing page requirements.
+        </p>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+          HTML • Tailwind CSS • Vanilla JavaScript
+        </p>
+        <div class="flex gap-4">
+          <a href="https://kex-03.github.io/language-school-showcase/" class="text-blue-600 dark:text-blue-400 hover:underline">
+            Live Demo
+          </a>
+          <a href="https://github.com/KEX-03/language-school-showcase" class="text-blue-600 dark:text-blue-400 hover:underline">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-20 border-t border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-semibold mb-10">Skills</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="font-semibold mb-3">Frontend</h3>
+          <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>Tailwind CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-3">Tools</h3>
+          <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+            <li>Git & GitHub</li>
+            <li>VS Code</li>
+            <li>Chrome DevTools</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold mb-3">Learning Next</h3>
+          <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+            <li>React</li>
+            <li>Backend fundamentals</li>
+            <li>APIs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-semibold mb-6">Contact</h2>
+
+      <div class="space-y-3">
+        <p>
+          <a href="https://github.com/KEX-03"
+             class="text-blue-600 dark:text-blue-400 hover:underline">
+            github.com/KEX-03
+          </a>
+        </p>
+        <p>
+          <a href="https://linkedin.com/in/kex03"
+             class="text-blue-600 dark:text-blue-400 hover:underline">
+            linkedin.com/in/kex03
+          </a>
+        </p>
+        <p>
+          <a href="mailto:vvk.shrma.03@gmail.com"
+             class="text-blue-600 dark:text-blue-400 hover:underline">
+            vvk.shrma.03@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 text-center text-sm text-gray-500 dark:text-gray-400">
+    © 2025 Vivek — Frontend Portfolio
+  </footer>
+
+</body>
+</html>
