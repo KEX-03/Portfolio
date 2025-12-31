@@ -9,7 +9,6 @@
   <meta name="description" content="Frontend-focused web developer building clean, responsive, and accessible web interfaces using HTML, Tailwind CSS, and JavaScript.">
   <meta name="author" content="Vivek">
 
-  <!-- Tailwind config: system-based dark mode -->
   <script>
     tailwind = {
       config: {
@@ -18,10 +17,8 @@
     }
   </script>
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -66,24 +63,21 @@
   <section class="py-20 border-t border-gray-200 dark:border-gray-800">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-2xl font-semibold mb-6">About</h2>
-      <p class="max-w-3xl leading-relaxed text-gray-700 dark:text-gray-300">
 
-        <p class="max-w-3xl leading-relaxed mb-4">
-            I’m a frontend-focused web developer working toward building skills that can be practically monetized through real projects. I enjoy translating ideas into clean, responsive interfaces using modern HTML, CSS, and JavaScript.
-        </p>
+      <p class="max-w-3xl leading-relaxed mb-4">
+        I’m a frontend-focused web developer working toward building skills that can be practically monetized through real projects. I enjoy translating ideas into clean, responsive interfaces using modern HTML, CSS, and JavaScript.
+      </p>
 
-        <p class="max-w-3xl leading-relaxed mb-4">
-            I approach development with a focus on clarity, maintainability, and real-world usability. I prefer understanding how things work under the hood rather than relying on abstractions I can’t explain.
-        </p>
+      <p class="max-w-3xl leading-relaxed mb-4">
+        I approach development with a focus on clarity, maintainability, and real-world usability. I prefer understanding how things work under the hood rather than relying on abstractions I can’t explain.
+      </p>
 
-        <p class="max-w-3xl leading-relaxed mb-4">
-            I’ve recently completed and deployed multiple static projects where I handled layout, responsiveness, accessibility considerations, and non-trivial interaction logic such as scroll-based navigation state.
-        </p>
+      <p class="max-w-3xl leading-relaxed mb-4">
+        I’ve completed and deployed multiple frontend projects where I handled layout, responsiveness, accessibility considerations, and non-trivial interaction logic.
+      </p>
 
-        <p class="max-w-3xl leading-relaxed">
-            I’m currently deepening my frontend foundation while gradually expanding toward full-stack development through hands-on projects.
-        </p>
-
+      <p class="max-w-3xl leading-relaxed">
+        I’m currently deepening my frontend foundation while gradually expanding toward full-stack development through hands-on projects.
       </p>
     </div>
   </section>
@@ -93,30 +87,68 @@
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-2xl font-semibold mb-10">Projects</h2>
 
-      <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">
-          Language School Website
-        </h3>
-        <p class="text-gray-600 dark:text-gray-300 mb-4">
-          Designed and developed a responsive language school landing page as a frontend showcase project.
-        </p>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">
-            Implemented smooth anchor navigation, scroll-based section animations, and active navbar highlighting using IntersectionObserver. Paid particular attention to fixed-navbar UX edge cases, accessibility, and system-based light/dark theming.
-        </p>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">
-            The project was deployed using GitHub Pages and structured to reflect real-world landing page requirements.
-        </p>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
-          HTML • Tailwind CSS • Vanilla JavaScript
-        </p>
-        <div class="flex gap-4">
-          <a href="https://deutschwelt.netlify.app/" class="text-blue-600 dark:text-blue-400 hover:underline">
-            Live Demo
-          </a>
-          <a href="https://github.com/KEX-03/language-school-showcase" class="text-blue-600 dark:text-blue-400 hover:underline">
-            GitHub
-          </a>
+      <div class="space-y-8">
+
+        <!-- EXPENSE TRACKER -->
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">
+            Expense Tracker (Splitwise-inspired)
+          </h3>
+
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            A frontend expense tracking application built to manage shared expenses and calculate balances dynamically.
+          </p>
+
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            Implemented full CRUD functionality for participants and expenses, category-based and participant-based filters, and derived balance calculations without duplicating state. The architecture separates UI logic, business logic, and persistence to remain backend-ready.
+          </p>
+
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+            HTML • Tailwind CSS • Vanilla JavaScript (ES Modules)
+          </p>
+
+          <div class="flex gap-4">
+            <a href="https://YOUR-LIVE-DEMO-LINK"
+               class="text-blue-600 dark:text-blue-400 hover:underline">
+              Live Demo
+            </a>
+            <a href="https://github.com/KEX-03/expense-tracker"
+               class="text-blue-600 dark:text-blue-400 hover:underline">
+              GitHub
+            </a>
+          </div>
         </div>
+
+        <!-- LANGUAGE SCHOOL -->
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">
+            Language School Website
+          </h3>
+
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            A responsive landing page built as a frontend showcase for a language institute.
+          </p>
+
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            Implemented smooth anchor navigation, scroll-based section animations, and active navbar highlighting using IntersectionObserver, with attention to accessibility and fixed-navbar UX edge cases.
+          </p>
+
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+            HTML • Tailwind CSS • Vanilla JavaScript
+          </p>
+
+          <div class="flex gap-4">
+            <a href="https://deutschwelt.netlify.app/"
+               class="text-blue-600 dark:text-blue-400 hover:underline">
+              Live Demo
+            </a>
+            <a href="https://github.com/KEX-03/language-school-showcase"
+               class="text-blue-600 dark:text-blue-400 hover:underline">
+              GitHub
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -193,4 +225,3 @@
 
 </body>
 </html>
-
