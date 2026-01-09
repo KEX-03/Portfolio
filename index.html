@@ -214,26 +214,50 @@
       });
     });
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          const id = entry.target.id;
-          const link = Array.from(navLinks).find(
-            l => l.getAttribute('href') === `#${id}`
-          );
-          
-          if (link) {
-            link.classList.toggle('active', entry.isIntersecting);
-          }
-        });
-      },
-      {
-        threshold: 0.15,
-        rootMargin: '-100px 0px -80% 0px'
-      }
-    );
+    function setActiveById(id) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+    }
 
-    sections.forEach(section => observer.observe(section));
+    function updateActiveOnScroll() {
+      const headerOffset = 120; // approximate header height / scroll-margin-top
+      const viewportMid = window.scrollY + window.innerHeight / 2;
+
+      let matchedId = null;
+
+      sections.forEach(section => {
+        const top = section.offsetTop - headerOffset;
+        const bottom = top + section.offsetHeight;
+
+        if (viewportMid >= top && viewportMid < bottom) {
+          matchedId = section.id;
+        }
+      });
+
+      if (matchedId) {
+        setActiveById(matchedId);
+      } else {
+        // clear active if no section is in the middle of the viewport
+        navLinks.forEach(link => link.classList.remove('active'));
+      }
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateActiveOnScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    window.addEventListener('resize', updateActiveOnScroll);
+
+    // Initialize active state on load
+    updateActiveOnScroll();
   </script>
 
 </body>
