@@ -25,24 +25,48 @@
     body {
       font-family: 'Inter', sans-serif;
     }
+
+    .nav-link.active {
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    section {
+      scroll-margin-top: 110px;
+    }
   </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
-  <!-- NAVBAR -->
   <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur border-b border-gray-200 dark:border-gray-700 z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <span class="font-semibold text-lg">Vivek</span>
+
       <div class="space-x-6 hidden sm:block">
-        <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
-        <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
-        <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+        <a href="#projects" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+        <a href="#skills" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
+        <a href="#contact" class="nav-link hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+      </div>
+
+      <button id="menuBtn" class="sm:hidden focus:outline-none" aria-label="Toggle navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="sm:hidden hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
+      <div class="px-6 py-4 space-y-4">
+        <a href="#projects" class="nav-link block hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+        <a href="#skills" class="nav-link block hover:text-blue-600 dark:hover:text-blue-400">Skills</a>
+        <a href="#contact" class="nav-link block hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="pt-32 pb-24">
     <div class="max-w-6xl mx-auto px-6">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">
@@ -59,7 +83,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section class="py-20 border-t border-gray-200 dark:border-gray-800">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-2xl font-semibold mb-6">About</h2>
@@ -82,78 +105,48 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-2xl font-semibold mb-10">Projects</h2>
 
       <div class="space-y-8">
-
-        <!-- EXPENSE TRACKER -->
         <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">
-            Expense Tracker (Splitwise-inspired)
-          </h3>
-
+          <h3 class="text-xl font-semibold mb-2">Expense Tracker (Splitwise-inspired)</h3>
           <p class="text-gray-600 dark:text-gray-300 mb-4">
-            A frontend expense tracking application built to manage shared expenses and calculate balances dynamically.
+            Frontend expense tracking application with dynamic balance calculation.
           </p>
-
           <p class="text-gray-700 dark:text-gray-300 mb-4">
-            Implemented full CRUD functionality for participants and expenses, category-based and participant-based filters, and derived balance calculations without duplicating state. The architecture separates UI logic, business logic, and persistence to remain backend-ready.
+            Full CRUD for participants and expenses, filters, and derived state architecture designed to be backend-ready.
           </p>
-
-          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
-            HTML • Tailwind CSS • Vanilla JavaScript (ES Modules)
-          </p>
-
-          <div class="flex gap-4">
-            <a href="https://expensetracker-kex03.netlify.app/"
-               class="text-blue-600 dark:text-blue-400 hover:underline">
-              Live Demo
-            </a>
-            <a href="https://github.com/KEX-03/expense-tracker"
-               class="text-blue-600 dark:text-blue-400 hover:underline">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <!-- LANGUAGE SCHOOL -->
-        <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold mb-2">
-            Language School Website
-          </h3>
-
-          <p class="text-gray-600 dark:text-gray-300 mb-4">
-            A responsive landing page built as a frontend showcase for a language institute.
-          </p>
-
-          <p class="text-gray-700 dark:text-gray-300 mb-4">
-            Implemented smooth anchor navigation, scroll-based section animations, and active navbar highlighting using IntersectionObserver, with attention to accessibility and fixed-navbar UX edge cases.
-          </p>
-
           <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
             HTML • Tailwind CSS • Vanilla JavaScript
           </p>
-
           <div class="flex gap-4">
-            <a href="https://deutschwelt.netlify.app/"
-               class="text-blue-600 dark:text-blue-400 hover:underline">
-              Live Demo
-            </a>
-            <a href="https://github.com/KEX-03/language-school-showcase"
-               class="text-blue-600 dark:text-blue-400 hover:underline">
-              GitHub
-            </a>
+            <a href="https://expensetracker-kex03.netlify.app/" class="text-blue-600 dark:text-blue-400 hover:underline">Live Demo</a>
+            <a href="https://github.com/KEX-03/expense-tracker" class="text-blue-600 dark:text-blue-400 hover:underline">GitHub</a>
           </div>
         </div>
 
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2">Language School Website</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Responsive landing page showcasing UI and UX fundamentals.
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            Implemented smooth scrolling, animations, and active navigation state using IntersectionObserver.
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+            HTML • Tailwind CSS • JavaScript
+          </p>
+          <div class="flex gap-4">
+            <a href="https://deutschwelt.netlify.app/" class="text-blue-600 dark:text-blue-400 hover:underline">Live Demo</a>
+            <a href="https://github.com/KEX-03/language-school-showcase" class="text-blue-600 dark:text-blue-400 hover:underline">GitHub</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section id="skills" class="py-20 border-t border-gray-200 dark:border-gray-800">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-2xl font-semibold mb-10">Skills</h2>
@@ -161,7 +154,7 @@
       <div class="grid md:grid-cols-3 gap-8">
         <div>
           <h3 class="font-semibold mb-3">Frontend</h3>
-          <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+          <ul class="space-y-1">
             <li>HTML5</li>
             <li>CSS3</li>
             <li>Tailwind CSS</li>
@@ -171,7 +164,7 @@
 
         <div>
           <h3 class="font-semibold mb-3">Tools</h3>
-          <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+          <ul class="space-y-1">
             <li>Git & GitHub</li>
             <li>VS Code</li>
             <li>Chrome DevTools</li>
@@ -180,7 +173,7 @@
 
         <div>
           <h3 class="font-semibold mb-3">Learning Next</h3>
-          <ul class="space-y-1 text-gray-700 dark:text-gray-300">
+          <ul class="space-y-1">
             <li>React</li>
             <li>Backend fundamentals</li>
             <li>APIs</li>
@@ -190,38 +183,59 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-2xl font-semibold mb-6">Contact</h2>
-
       <div class="space-y-3">
-        <p>
-          <a href="https://github.com/KEX-03"
-             class="text-blue-600 dark:text-blue-400 hover:underline">
-            github.com/KEX-03
-          </a>
-        </p>
-        <p>
-          <a href="https://linkedin.com/in/kex03"
-             class="text-blue-600 dark:text-blue-400 hover:underline">
-            linkedin.com/in/kex03
-          </a>
-        </p>
-        <p>
-          <a href="mailto:vvk.shrma.03@gmail.com"
-             class="text-blue-600 dark:text-blue-400 hover:underline">
-            vvk.shrma.03@gmail.com
-          </a>
-        </p>
+        <a href="https://github.com/KEX-03" class="block text-blue-600 dark:text-blue-400 hover:underline">github.com/KEX-03</a>
+        <a href="https://linkedin.com/in/kex03" class="block text-blue-600 dark:text-blue-400 hover:underline">linkedin.com/in/kex03</a>
+        <a href="mailto:vvk.shrma.03@gmail.com" class="block text-blue-600 dark:text-blue-400 hover:underline">vvk.shrma.03@gmail.com</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="py-8 text-center text-sm text-gray-500 dark:text-gray-400">
     © 2025 Vivek — Frontend Portfolio
   </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.id;
+
+          navLinks.forEach(link => {
+            link.classList.toggle(
+              'active',
+              link.getAttribute('href') === `#${id}`
+            );
+          });
+        });
+      },
+      {
+        threshold: 0.6,
+        rootMargin: '-90px 0px -40% 0px'
+      }
+    );
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
