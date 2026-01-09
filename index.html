@@ -217,20 +217,19 @@
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
           const id = entry.target.id;
-
-          navLinks.forEach(link => {
-            link.classList.toggle(
-              'active',
-              link.getAttribute('href') === `#${id}`
-            );
-          });
+          const link = Array.from(navLinks).find(
+            l => l.getAttribute('href') === `#${id}`
+          );
+          
+          if (link) {
+            link.classList.toggle('active', entry.isIntersecting);
+          }
         });
       },
       {
-        threshold: 0.1,
-        rootMargin: '-90px 0px 0px 0px'
+        threshold: 0.15,
+        rootMargin: '-100px 0px -80% 0px'
       }
     );
 
